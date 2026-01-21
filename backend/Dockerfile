@@ -15,6 +15,8 @@ RUN apk add --no-cache \
     && apk del g++ make autoconf pkgconf \
     && rm -rf /usr/src/php*
 
+RUN wget https://getcomposer.org/composer-stable.phar -O /usr/local/bin/composer && chmod +x /usr/local/bin/composer
+
 COPY . /var/www
 
 EXPOSE 9000
