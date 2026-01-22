@@ -9,7 +9,8 @@ const routes = [
     },
     {
         path: '/task',
-        component: TasksManager
+        component: TasksManager,
+        meta: { requiresAuth: true }
     },
     {
         path: '/',
@@ -20,6 +21,19 @@ const routes = [
 const router = createRouter({
     history: createWebHistory(),
     routes
+})
+
+router.beforeEach((to, from, next) => {
+    if (to.meta.requiresAuth) {
+        const token = localStorage.getItem('token')
+        if (!token) {
+            next('/login')
+        } else {
+            next()
+        }
+    } else {
+        next()
+    }
 })
 
 export default router
