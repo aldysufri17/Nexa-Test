@@ -71,7 +71,7 @@ npm run dev
 ---
 
 
-### 🔹 Menjalankan dengan Docker (Direkomendasikan)
+###  🐳 Menjalankan dengan Docker (Direkomendasikan)
 
 Pastikan Docker dan Docker Compose sudah terinstall di sistem Anda.
 
