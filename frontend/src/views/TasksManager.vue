@@ -2,7 +2,7 @@
     <div class="container mt-4">
         <div class="d-flex justify-content-between mb-3">
             <h3>Task Manager</h3>
-            <button class="btn btn-outline-danger">Logout</button>
+            <button class="btn btn-outline-danger" @click="logout">Logout</button>
         </div>
 
         <div class="card p-3 mb-4">
@@ -120,6 +120,15 @@
         form.value = { title: '', status: 'todo', deadline: '' }
         isEdit.value = false
         editId.value = null
+    }
+
+    const logout = async () => {
+        try {
+            await api.post('/logout')
+        } catch (e) { }
+
+        localStorage.removeItem('token')
+        router.push('/login')
     }
 
     onMounted(() => {
