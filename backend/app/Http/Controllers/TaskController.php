@@ -13,8 +13,8 @@ class TaskController extends Controller
      */
     public function index(Request $request)
     {
-        $status = $request->status;
-        $sort   = $request->sort;
+        $status     = $request->status;
+        $deadline   = $request->deadline;
 
         $query  = Task::query();
 
@@ -22,11 +22,11 @@ class TaskController extends Controller
             $q->where('status', $status);
         });
 
-        if ($sort == 'deadline') {
-            $query->orderBy('deadline', 'asc');
-        } else {
-            $query->orderBy('created_at', 'desc');
-        }
+        $query->when($deadline, function ($q, $deadline) {
+            $q->where('deadline', $deadline);
+        });
+
+        $query->orderBy('created_at', 'desc');
 
         return response()->json($query->get());
     }
