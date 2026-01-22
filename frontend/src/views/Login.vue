@@ -15,7 +15,14 @@
                 </div>
     
                 <button type="submit" class="btn btn-primary w-100">Login</button>
-    
+                
+                <div class="text-center mt-3">
+                    <small>
+                        Belum punya akun?
+                        <router-link to="/register">Register</router-link>
+                    </small>
+                </div>
+
                 <p v-if="error" class="text-danger mt-3">{{ error }}</p>
             </form>
         </div>

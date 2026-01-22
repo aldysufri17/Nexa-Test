@@ -1,11 +1,16 @@
 import { createRouter,createWebHistory } from 'vue-router'
 import Login from '../views/Login.vue'
+import Register from '../views/Register.vue'
 import TasksManager from '../views/TasksManager.vue'
 
 const routes = [
     {
         path: '/login',
         component: Login
+    },
+    {
+        path: '/register',
+        component: Register
     },
     {
         path: '/task',
