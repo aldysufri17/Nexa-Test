@@ -29,6 +29,22 @@
             </div>
         </div>
 
+        <div class="card p-3 mb-3">
+            <div class="row g-2">
+                <div class="col">
+                    <select class="form-select" v-model="filter.status">
+                        <option value="">Semua Status</option>
+                        <option value="todo">To Do</option>
+                        <option value="progress">On Progress</option>
+                        <option value="done">Done</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <input type="date" class="form-control" v-model="filter.deadline" />
+                </div>
+            </div>
+        </div>
+
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -68,7 +84,7 @@
 </template>
 
 <script setup>
-    import { ref, onMounted } from 'vue'
+    import { ref, onMounted, watch } from 'vue'
     import { useRouter } from 'vue-router'
     import api from '../api';
 
@@ -81,11 +97,20 @@
         deadline: ''
     })
 
+    const filter = ref({
+        status: '',
+        deadline: ''
+    })
+
     const isEdit = ref(false)
     const editId = ref(null)
 
     const loadTasks = async () => {
         const params = {}
+
+        if (filter.value.status) params.status = filter.value.status
+        if (filter.value.deadline) params.deadline = filter.value.deadline
+
         const res = await api.get('/tasks', { params })
         tasks.value = res.data
     }
@@ -132,6 +157,13 @@
         localStorage.removeItem('token')
         router.push('/login')
     }
+
+    watch(
+        () => ({ ...filter.value }),
+        () => {
+            loadTasks()
+        }
+    )
 
     onMounted(() => {
         loadTasks()
