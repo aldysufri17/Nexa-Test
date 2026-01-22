@@ -6,23 +6,51 @@
         </div>
 
         <div class="card p-3 mb-4">
-            <div class="row g-2">
-                <div class="col">
-                    <input class="form-control" placeholder="Judul" v-model="form.title" />
+            <div class="row mb-2">
+                <div class="col-12">
+                    <input class="form-control" placeholder="Title" v-model="form.title" />
                 </div>
-                <div class="col">
+            </div>
+
+            <div class="row mb-2">
+                <div class="col-6">
+                    <input type="date" class="form-control" v-model="form.deadline"/>
+                </div>
+                <div class="col-6">
                     <select class="form-select" v-model="form.status">
                         <option value="todo">To Do</option>
                         <option value="progress">On Progress</option>
                         <option value="done">Done</option>
                     </select>
                 </div>
-                <div class="col">
-                    <input type="date" class="form-control" v-model="form.deadline" />
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-12">
+                    <textarea
+                        class="form-control"
+                        placeholder="Description"
+                        v-model="form.description"
+                        rows="3"
+                    ></textarea>
                 </div>
-                <div class="col">
-                    <button class="btn w-100" :class="isEdit ? 'btn-warning' : 'btn-primary'"
-                        @click="isEdit ? updateTask() : saveTask()">
+            </div>
+
+            <div class="row">
+                <div class="col-12 d-flex justify-content-end gap-2">
+                    <button
+                        v-if="isEdit"
+                        class="btn btn-secondary"
+                        @click="resetForm"
+                    >
+                        Batal
+                    </button>
+
+                    <button
+                        class="btn"
+                        :class="isEdit ? 'btn-warning' : 'btn-primary'"
+                        @click="isEdit ? updateTask() : saveTask()"
+                    >
                         {{ isEdit ? 'Update' : 'Tambah' }}
                     </button>
                 </div>
@@ -58,7 +86,7 @@
             <tbody>
                 <tr v-for="(task, index) in tasks" :key="task.id">
                     <td width="5%">{{ index + 1 }}</td>
-                    <td>{{ task.title }}</td>
+                    <td width="50%">{{ task.title }}</td>
                     <td>{{ task.status }}</td>
                     <td>{{ task.deadline }}</td>
                     <td>
@@ -128,7 +156,8 @@
         form.value = {
             title: task.title,
             status: task.status,
-            deadline: task.deadline
+            deadline: task.deadline,
+            description: task.description
         }
     }
 
