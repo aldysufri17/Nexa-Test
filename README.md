@@ -27,7 +27,7 @@ Aplikasi ini memiliki beberapa fitur utama:
 
 ---
 
-## 🚀 Langkah Menjalankan Sistem
+## 🚀 Langkah Menjalankan Sistem (Tanpa Docker)
 
 ### 🔹 Backend
 ```bash
@@ -68,9 +68,36 @@ npm run dev
 ```
 
 
+---
+
+
+### 🔹 Menjalankan dengan Docker (Direkomendasikan)
+
+Pastikan Docker dan Docker Compose sudah terinstall di sistem Anda.
+
+```bash
+# Jalankan seluruh container (backend, frontend, database)
+docker compose up --build
+
+# Masuk ke container nexa-api-app (backend) 
+# Lakukan instalasi aplikasi backend seperti Langkah Menjalankan Sistem (Tanpa Docker)
+docker exec -it nexa-api-app sh
+
+# Masuk ke container nexa-api-app (frontend) 
+# Lakukan instalasi aplikasi backend seperti Langkah Menjalankan Sistem (Tanpa Docker)
+docker exec -it nexa-web sh
+```
+
+
+---
+
+
 ## 🔐 Informasi Login Dummy
 Email    : test@example.com  
 Password : password  
+
+
+---
 
 
 ## 🗄️ Struktur Database
@@ -96,6 +123,9 @@ Password : password
 | deadline    | date      | Tanggal deadline       |
 | created_at  | timestamp |                        |
 | updated_at  | timestamp |                        |
+
+
+---
 
 
 ## 📷 Screenshot
