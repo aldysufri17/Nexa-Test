@@ -8,16 +8,17 @@
         <div class="card p-3 mb-4">
             <div class="row g-2">
                 <div class="col">
-                    <input class="form-control" placeholder="Judul" />
+                    <input class="form-control" placeholder="Judul"/>
                 </div>
                 <div class="col">
-                    <select class="form-select" >
-                        <option value="todo">Todo</option>
+                    <select class="form-select">
+                        <option value="todo">To do</option>
+                        <option value="progress">On Progress</option>
                         <option value="done">Done</option>
                     </select>
                 </div>
                 <div class="col">
-                    <input type="date" class="form-control" />
+                    <input type="date" class="form-control"/>
                 </div>
                 <div class="col">
                     <button class="btn btn-primary w-100">Tambah</button>
