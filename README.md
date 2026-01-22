@@ -129,7 +129,29 @@ Password : password
 
 
 ## 📷 Screenshot
-<img width="623" height="546" alt="Screenshot from 2026-01-22 18 07 52" src="https://github.com/user-attachments/assets/83e46039-3273-4e6e-bfe3-4e397233580b" />
-<img width="1340" height="771" alt="Screenshot from 2026-01-22 18 08 33" src="https://github.com/user-attachments/assets/f43b6184-3326-44a3-9a94-a62c33098d68" />
-<img width="467" height="474" alt="Screenshot from 2026-01-22 18 08 06" src="https://github.com/user-attachments/assets/8742fc69-0911-4142-834a-db3f6a63c31e" />
+## 🖼️ Halaman Auth
+
+<table>
+  <tr>
+    <th align="center">Login</th>
+    <th align="center">Register</th>
+  </tr>
+  <tr>
+    <td align="center">
+      <img width="300" alt="Login" src="https://github.com/user-attachments/assets/83e46039-3273-4e6e-bfe3-4e397233580b" />
+    </td>
+    <td align="center">
+      <img width="300" alt="Register" src="https://github.com/user-attachments/assets/8742fc69-0911-4142-834a-db3f6a63c31e" />
+    </td>
+  </tr>
+</table>
+
+<br>
+
+### 🏠 Halaman Home (Task Manager)
+
+<p align="center">
+  <img width="800" alt="Home" src="https://github.com/user-attachments/assets/f43b6184-3326-44a3-9a94-a62c33098d68" />
+</p>
+
 
