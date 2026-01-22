@@ -23,6 +23,9 @@
 <script setup>
     import { ref } from 'vue'
     import api from '../api';
+    import { useRouter } from 'vue-router'
+
+    const router = useRouter()
 
     const form = ref({
         email: '',
@@ -36,6 +39,8 @@
             const res = await api.post('/login', form.value)
 
             localStorage.setItem('token', res.data.access_token)
+            
+            router.push('/task')
         } catch (err) {
             error.value = 'Login gagal, email atau password salah'
         }
