@@ -1,7 +1,7 @@
 # 🚀 Nexa-Test – Task Manager Application
 
 Nexa-Test adalah aplikasi web sederhana untuk mengelola daftar tugas (Task Manager) dengan sistem autentikasi.  
-Aplikasi ini dibuat sebagai implementasi **Laravel REST API** dan **Vue.js 3** dengan penerapan autentikasi menggunakan **JWT (JSON Web Token)**.
+Aplikasi ini dibuat sebagai implementasi **Laravel 12** dan **Vue.js 3** dengan penerapan autentikasi menggunakan **JWT (JSON Web Token)**.
 
 ---
 
@@ -20,7 +20,7 @@ Aplikasi ini memiliki beberapa fitur utama:
 
 ## ⚙️ Teknologi yang Digunakan
 
-- **Backend** : Laravel REST API + JWT Authentication  
+- **Backend** : Laravel 12 + JWT Authentication  
 - **Frontend** : Vue.js 3  
 - **Database** : MySQL  
 - **Tools** : Git, GitHub, Postman  
@@ -129,3 +129,7 @@ Password : password
 
 
 ## 📷 Screenshot
+<img width="623" height="546" alt="Screenshot from 2026-01-22 18 07 52" src="https://github.com/user-attachments/assets/83e46039-3273-4e6e-bfe3-4e397233580b" />
+<img width="1340" height="771" alt="Screenshot from 2026-01-22 18 08 33" src="https://github.com/user-attachments/assets/f43b6184-3326-44a3-9a94-a62c33098d68" />
+<img width="467" height="474" alt="Screenshot from 2026-01-22 18 08 06" src="https://github.com/user-attachments/assets/8742fc69-0911-4142-834a-db3f6a63c31e" />
+
