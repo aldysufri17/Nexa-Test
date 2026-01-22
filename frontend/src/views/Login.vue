@@ -21,16 +21,12 @@
 </template>
 
 <script setup>
-    import axios from 'axios'
     import { ref } from 'vue'
+    import api from '../api';
 
     const form = ref({
         email: '',
         password: ''
-    })
-
-    const api = axios.create({
-        baseURL: 'http://127.0.0.1:8099/api',
     })
 
     const error = ref('')
