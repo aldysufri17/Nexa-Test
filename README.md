@@ -84,7 +84,7 @@ docker compose up --build
 docker exec -it nexa-api-app sh
 
 # Masuk ke container nexa-api-app (frontend) 
-# Lakukan instalasi aplikasi backend seperti Langkah Menjalankan Sistem (Tanpa Docker)
+# Lakukan instalasi aplikasi frontend seperti Langkah Menjalankan Sistem (Tanpa Docker)
 docker exec -it nexa-web sh
 ```
 
