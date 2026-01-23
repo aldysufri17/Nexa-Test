@@ -1,7 +1,7 @@
 # 🚀 Nexa-Test – Task Manager Application
 
 Nexa-Test adalah aplikasi web sederhana untuk mengelola daftar tugas (Task Manager) dengan sistem autentikasi.  
-Aplikasi ini dibuat sebagai implementasi **Laravel REST API** dan **Vue.js 3** dengan penerapan autentikasi menggunakan **JWT (JSON Web Token)**.
+Aplikasi ini dibuat sebagai implementasi **Laravel 12** dan **Vue.js 3** dengan penerapan autentikasi menggunakan **JWT (JSON Web Token)**.
 
 ---
 
@@ -20,7 +20,7 @@ Aplikasi ini memiliki beberapa fitur utama:
 
 ## ⚙️ Teknologi yang Digunakan
 
-- **Backend** : Laravel REST API + JWT Authentication  
+- **Backend** : Laravel 12 + JWT Authentication  
 - **Frontend** : Vue.js 3  
 - **Database** : MySQL  
 - **Tools** : Git, GitHub, Postman  
@@ -84,7 +84,7 @@ docker compose up --build
 docker exec -it nexa-api-app sh
 
 # Masuk ke container nexa-api-app (frontend) 
-# Lakukan instalasi aplikasi backend seperti Langkah Menjalankan Sistem (Tanpa Docker)
+# Lakukan instalasi aplikasi frontend seperti Langkah Menjalankan Sistem (Tanpa Docker)
 docker exec -it nexa-web sh
 ```
 
@@ -129,3 +129,29 @@ Password : password
 
 
 ## 📷 Screenshot
+## 🖼️ Halaman Auth
+
+<table>
+  <tr>
+    <th align="center">Login</th>
+    <th align="center">Register</th>
+  </tr>
+  <tr>
+    <td align="center">
+      <img width="300" alt="Login" src="https://github.com/user-attachments/assets/83e46039-3273-4e6e-bfe3-4e397233580b" />
+    </td>
+    <td align="center">
+      <img width="300" alt="Register" src="https://github.com/user-attachments/assets/8742fc69-0911-4142-834a-db3f6a63c31e" />
+    </td>
+  </tr>
+</table>
+
+<br>
+
+### 🏠 Halaman Home (Task Manager)
+
+<p align="center">
+  <img width="800" alt="Home" src="https://github.com/user-attachments/assets/f43b6184-3326-44a3-9a94-a62c33098d68" />
+</p>
+
+
